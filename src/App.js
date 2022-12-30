@@ -6,7 +6,7 @@ import { db, auth } from "./firebase";
 import Modal from "@mui/material/Modal";
 import { Button, Input } from "@mui/material";
 import ImageUpload from "./ImageUpload";
-import InstagramEmbed from "react-instagram-embed";
+
 const style = {
   position: "absolute",
   top: "50%",
@@ -180,21 +180,7 @@ function App() {
             );
           })}
         </div>
-        <div className="app_postRight">
-          <InstagramEmbed
-            url="https://www.instagram.com/p/Zw9o4/"
-            clientAccessToken="123|456"
-            maxWidth={320}
-            hideCaption={false}
-            containerTagName="div"
-            protocol=""
-            injectScript
-            onLoading={() => {}}
-            onSuccess={() => {}}
-            onAfterRender={() => {}}
-            onFailure={(err) => {}}
-          />
-        </div>
+       
       </div>
       {user?.displayName ? (
         <ImageUpload username={user.displayName}></ImageUpload>
